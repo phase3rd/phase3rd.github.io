@@ -4,7 +4,7 @@ title: Your First Post
 published: true
 date: 2016-1-11
 categories: [test]
-tags: [test]
+tags: [test,tagtest2]
 ---
 
 ### My First Posting
