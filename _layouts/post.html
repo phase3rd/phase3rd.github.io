@@ -17,7 +17,6 @@ layout: default
 
   <div>
     <ul class="tags post-tags cf">
-      <li>Tagged:</li>
       {% for tag in page.tags %}
       <li><a href="/search/?tags={{ tag }}">{{ tag | downcase }}</a></li>
       {% endfor %}
