@@ -18,7 +18,7 @@ layout: default
   <div>
     <ul class="tags post-tags cf">
       {% for tag in page.tags %}
-      <li>{{ tag | downcase }}</li>
+      <li><a>{{ tag | downcase }}</a></li>
       {% endfor %}
     </ul>
   </div>
