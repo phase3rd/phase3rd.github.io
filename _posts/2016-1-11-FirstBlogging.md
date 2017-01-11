@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Your First Post
-published: false
+published: true
 date: 2016-1-11
 categories: [test]
 tags: [test]
