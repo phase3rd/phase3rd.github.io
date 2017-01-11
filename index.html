@@ -7,6 +7,14 @@ layout: default
     <article class="post">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      
+      <div>
+        <ul class="tags post-tags cf">
+          {% for tag in page.tags %}
+          <li>{{ tag | downcase }}</li>
+          {% endfor %}
+        </ul>
+      </div>
 
       <div class="entry">
         {{ post.excerpt }}
