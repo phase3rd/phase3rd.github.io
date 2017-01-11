@@ -278,6 +278,45 @@ nav {
   background-color: $lightGray;
 }
 
+/*****************************************************************************/
+/*
+/* tag
+/*
+/*****************************************************************************/
+.tags li {
+  float: left;
+  font-size: 13px;
+  font-size: 1rem;
+  line-height: 2.5;
+}
+
+.tags li a {
+  padding: 4px 6px;
+  margin: 2px;
+  background-color: #e6e6e6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.post-tags {
+  margin: 0 0 0 0;
+}
+/* normalize.css Clearfix */
+.cf {
+  *zoom: 1
+}
+
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both
+}
+
 footer {
   padding: 20px 0;
   text-align: center;
