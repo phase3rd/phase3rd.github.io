@@ -21,12 +21,15 @@ func test(message string ) string {
 * 최근 UNIX_TIMESTAMP를 사용하면서 알게된 사실
 아직도 32bit 를 사용하기 때문에 2038년이 계산이 되지 않습니다.
 ```sql
-mysql> SELECT unix_timestamp('2038-1-31 00:00:00')
+ SELECT unix_timestamp('2038-1-31 00:00:00')
+```
+```
 +--------------------------------------+
 | unix_timestamp('2038-1-31 00:00:00') |
 +--------------------------------------+
 |                                    0 |
 +--------------------------------------+
-
+```
+```sql
 SELECT (((TO_DAYS(date) * 86400) + TIME_TO_SEC(date)) - (TO_DAYS("1970-01-01") * 86400)) AS timestamp
 ```
