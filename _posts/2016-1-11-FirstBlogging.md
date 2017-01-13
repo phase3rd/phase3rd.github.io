@@ -12,7 +12,7 @@ tags: [test,sql,go,기타등등]
 맥북에서 git 을 연동하여 Atom으로 작업하고 있습니다.
 Markdown Preview 를 활용하여 md파일을 작성하고 있습니다.
 
- * go 언어를 주고 개발하고 있어서 go 하일라이트 테스트를 합니다.
+* go 언어를 주고 개발하고 있어서 go 하일라이트 테스트를 합니다.
 ```go
 func test(message string ) string {
   return "hello" + message
