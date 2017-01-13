@@ -17,7 +17,7 @@ tags: [sql,index,index순서]
 
 ##### 걸리는 경우는
 * A , B , C 모두 포함된 경우
-```sql
+```SQL
 mysql> explain select * from tb_index_test WHERE ID_C=1 AND ID_B=1 AND ID_A=1;;
 +----+-------------+---------------+------------+------+---------------+------------+---------+-------------------+------+----------+-------+
 | id | select_type | table         | partitions | type | possible_keys | key        | key_len | ref               | rows | filtered | Extra |
@@ -26,8 +26,9 @@ mysql> explain select * from tb_index_test WHERE ID_C=1 AND ID_B=1 AND ID_A=1;;
 +----+-------------+---------------+------------+------+---------------+------------+---------+-------------------+------+----------+-------+
 1 row in set, 1 warning (0.00 sec)
 ```
+
 * A , B 또는 C 가 걸린 경우
-```sql
+```SQL
 mysql> explain select * from tb_index_test WHERE ID_C=1  AND ID_A=1;;
 +----+-------------+---------------+------------+------+---------------+------+---------+------+------+----------+-------------+
 | id | select_type | table         | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
@@ -36,8 +37,9 @@ mysql> explain select * from tb_index_test WHERE ID_C=1  AND ID_A=1;;
 +----+-------------+---------------+------------+------+---------------+------+---------+------+------+----------+-------------+
 1 row in set, 1 warning (0.00 sec)
 ```
+
 * A 만 단독으로 걸린경우
-```sql
+```SQL
 mysql> explain select * from tb_index_test WHERE ID_A=1;;
 +----+-------------+---------------+------------+------+---------------+------+---------+------+------+----------+-------------+
 | id | select_type | table         | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
