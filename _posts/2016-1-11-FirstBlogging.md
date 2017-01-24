@@ -1,28 +1,22 @@
 ---
 layout: post
-title: Your First Post
+title: MySQL UNIX_TIMESTAMP 2038 YEAR BUG
 published: true
 date: 2016-1-11
-categories: [test]
-tags: [test,sql,go,기타등등]
+categories: [sql]
+tags: [db,sql,mysql]
 ---
 
-### 처음테스트 입니다.
+#### MySQL 의 UNIX_TIMESTAMP함수는 2038년 이후는 작동하지 않습니다.
 
-맥북에서 git 을 연동하여 Atom으로 작업하고 있습니다.
-Markdown Preview 를 활용하여 md파일을 작성하고 있습니다.
+최근 UNIX_TIMESTAMP를 사용하면서 알게된 사실
+아직도(v5.7) 32bit 를 사용하기 때문에 2038년이 계산이 되지 않습니다.
 
-* go 언어를 주고 개발하고 있어서 go 하일라이트 테스트를 합니다.
-```go
-func test(message string ) string {
-  return "hello" + message
-}
-```
-* 최근 UNIX_TIMESTAMP를 사용하면서 알게된 사실
-아직도 32bit 를 사용하기 때문에 2038년이 계산이 되지 않습니다.
 ```sql
  SELECT unix_timestamp('2038-1-31 00:00:00')
 ```
+
+결과
 ```
 +--------------------------------------+
 | unix_timestamp('2038-1-31 00:00:00') |
@@ -30,6 +24,8 @@ func test(message string ) string {
 |                                    0 |
 +--------------------------------------+
 ```
+
+버그를 피하기위해 직접 계산하는 함수를 만드는것도 방법입니다.
 ```sql
 SELECT (((TO_DAYS(date) * 86400) + TIME_TO_SEC(date)) - (TO_DAYS("1970-01-01") * 86400)) AS timestamp
 ```

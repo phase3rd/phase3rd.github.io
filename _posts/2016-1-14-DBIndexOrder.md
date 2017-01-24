@@ -3,11 +3,10 @@ layout: post
 title: DB Index 순서에 대하여
 published: true
 date: 2016-1-14
-categories: [SQL]
-tags: [sql,index,index순서]
+categories: [sql]
+tags: [sql,db,mysql,index,index순서]
 ---
 
-### DB Index 순서
 
 전에는 항상 WHERE 조건의 순서와 INDEX의 순서를 일치시키도록 했었다.
 
@@ -20,6 +19,7 @@ tags: [sql,index,index순서]
 ```sql
 explain select * from tb_index_test WHERE ID_C=1 AND ID_B=1 AND ID_A=1;
 ```
+ * 결과
 ```
 +----+-------------+---------------+------------+------+---------------+------------+---------+-------------------+------+----------+-------+
 | id | select_type | table         | partitions | type | possible_keys | key        | key_len | ref               | rows | filtered | Extra |
@@ -33,6 +33,7 @@ explain select * from tb_index_test WHERE ID_C=1 AND ID_B=1 AND ID_A=1;
 ```sql
 explain select * from tb_index_test WHERE ID_C=1  AND ID_A=1;
 ```
+ * 결과
 ```
 +----+-------------+---------------+------------+------+---------------+------+---------+------+------+----------+-------------+
 | id | select_type | table         | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
@@ -46,6 +47,7 @@ explain select * from tb_index_test WHERE ID_C=1  AND ID_A=1;
 ```sql
 explain select * from tb_index_test WHERE ID_A=1;
 ```
+ * 결과
 ```
 +----+-------------+---------------+------------+------+---------------+------+---------+------+------+----------+-------------+
 | id | select_type | table         | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
