@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: dragonhead
+name: game network programming
 
 # Short bio or description (displayed in the header)
 description: Game Network Programmer from Somewhere
@@ -21,7 +21,7 @@ footer-links:
   email: taku5k@gmail.com
   facebook:
   flickr:
-  github: dragonhead
+  github: taku5k
   instagram:
   linkedin:
   pinterest:
@@ -41,7 +41,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://dragonhead.github.io
+url: http://taku5k.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
