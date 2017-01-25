@@ -20,8 +20,8 @@ explain select * from tb_index_test WHERE ID_C=1 AND ID_B=1 AND ID_A=1;
 ```
 * 결과
 ```
-| id | select_type | table         | partitions | type | possible_keys | key        | key_len | ref               | rows | filtered | Extra |
-|  1 | SIMPLE      | tb_index_test | NULL       | ref  | TRIPLE_KEY    | TRIPLE_KEY | 15      | const,const,const |    1 |   100.00 | NULL  |
+ id  select_type  table          partitions  type  possible_keys  key         key_len  ref                rows  filtered  Extra
+  1  SIMPLE       tb_index_test  NULL        ref   TRIPLE_KEY     TRIPLE_KEY  15       const,const,const     1    100.00  NULL  
 1 row in set, 1 warning (0.00 sec)
 ```
 
@@ -31,8 +31,8 @@ explain select * from tb_index_test WHERE ID_C=1  AND ID_A=1;
 ```
 * 결과
 ```
-| id | select_type | table         | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
-|  1 | SIMPLE      | tb_index_test | NULL       | ALL  | TRIPLE_KEY    | NULL | NULL    | NULL |    8 |    12.50 | Using where |
+ id  select_type  table          partitions  type  possible_keys  key   key_len  ref   rows  filtered  Extra       
+  1  SIMPLE       tb_index_test  NULL        ALL   TRIPLE_KEY     NULL  NULL     NULL     8     12.50  Using where
 1 row in set, 1 warning (0.00 sec)
 ```
 
@@ -42,8 +42,8 @@ explain select * from tb_index_test WHERE ID_A=1;
 ```
 * 결과
 ```
-| id | select_type | table         | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
-|  1 | SIMPLE      | tb_index_test | NULL       | ALL  | TRIPLE_KEY    | NULL | NULL    | NULL |    8 |    50.00 | Using where |
+ id  select_type  table          partitions  type  possible_keys  key   key_len  ref   rows  filtered  Extra       
+  1  SIMPLE       tb_index_test  NULL        ALL   TRIPLE_KEY     NULL  NULL     NULL     8     50.00  Using where
 1 row in set, 1 warning (0.00 sec)
 ```
 
