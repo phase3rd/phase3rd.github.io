@@ -25,6 +25,7 @@ tags: [db,sql,mysql]
 ```
 
 버그를 피하기위해 직접 계산하는 함수를 만드는것도 방법입니다.
+
 ```sql
-SELECT (((TO_DAYS(date) * 86400) + TIME_TO_SEC(date)) - (TO_DAYS("1970-01-01") * 86400));
+ SELECT (((TO_DAYS(date) * 86400) + TIME_TO_SEC(date)) - (TO_DAYS("1970-01-01") * 86400));
 ```
