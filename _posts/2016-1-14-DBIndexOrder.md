@@ -16,7 +16,7 @@ tags: [sql,db,mysql,index,index순서]
 
 ##### 걸리는 경우는
 
-A B C 3개 모두 포함된 경우
+* A B C 3개 모두 포함된 경우
 ```sql
  explain
  select * from tb_index_test WHERE ID_C=1 AND ID_B=1 AND ID_A=1;
@@ -29,7 +29,7 @@ A B C 3개 모두 포함된 경우
  |  1 | SIMPLE      | tb_index_test | NULL       | ref  | TRIPLE_KEY    | TRIPLE_KEY | 15      | const,const,const |    1 |   100.00 | NULL  |
  +----+-------------+---------------+------------+------+---------------+------------+---------+-------------------+------+----------+-------+
 ```
-A , B 또는 C 가 걸린 경우
+* A , B 또는 C 가 걸린 경우
 ```sql
  explain
  select * from tb_index_test WHERE ID_C=1  AND ID_A=1;
@@ -43,7 +43,7 @@ A , B 또는 C 가 걸린 경우
  1 row in set, 1 warning (0.00 sec)
 ```
 
-A 만 단독으로 걸린경우
+* A 만 단독으로 걸린경우
 ```sql
  explain
  select * from tb_index_test WHERE ID_A=1;
