@@ -48,10 +48,12 @@ tags: [sql,db,mysql,index,index순서]
 ```
 
 * A 만 단독으로 걸린경우
+
 ```sql
  explain
  select * from tb_index_test WHERE ID_A=1;
 ```
+
 ```c
  +----+-------------+---------------+------------+------+---------------+------+---------+------+------+----------+-------------+
  | id | select_type | table         | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
