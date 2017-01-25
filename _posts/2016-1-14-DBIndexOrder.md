@@ -16,7 +16,7 @@ tags: [sql,db,mysql,index,index순서]
 
 ##### 걸리는 경우는
 
-A , B , C 모두 포함된 경우
+A B C 3개 모두 포함된 경우
 ```sql
  explain
  select * from tb_index_test WHERE ID_C=1 AND ID_B=1 AND ID_A=1;
