@@ -15,13 +15,13 @@ INDEX 가 A , B , C 순서로 걸려있는 테이블이 있다고 가정했을�
 
 하지만 INDEX 가 걸려있는 순서에 우선적으로 조건을 주어야 합니다.
 
-##### 걸리는 경우는
+#### 걸리는 경우는
 
 * A, B, C 3개 모두 포함된 경우
 
 ```sql
  EXPLAIN
- SELECT * FROM tb_index_test 
+ SELECT * FROM tb_index_test
  WHERE ID_C=1 AND ID_B=1 AND ID_A=1;
 ```
 
@@ -38,7 +38,7 @@ INDEX 가 A , B , C 순서로 걸려있는 테이블이 있다고 가정했을�
 
 ```sql
  EXPLAIN
- SELECT * FROM tb_index_test 
+ SELECT * FROM tb_index_test
  WHERE ID_C=1  AND ID_A=1;
 ```
 
@@ -55,7 +55,7 @@ INDEX 가 A , B , C 순서로 걸려있는 테이블이 있다고 가정했을�
 
 ```sql
  EXPLAIN
- SELECT * FROM tb_index_test 
+ SELECT * FROM tb_index_test
  WHERE ID_A=1;
 ```
 

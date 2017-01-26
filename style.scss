@@ -18,21 +18,21 @@ html {
 }
 
 body {
-	background: $white;
+	background: $backGroundColor;
   font: 14px/1.4 $helvetica;
-  color: $darkGray;
+  color: $textColor;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 920px;
   padding: 0 10px;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $subTitleColor;
   font-weight: bold;
 
   line-height: 1.7;
@@ -45,40 +45,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 24px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
-}
-
-h3 {
   font-size: 20px;
 }
 
-h4 {
+h3 {
   font-size: 18px;
-  color: $gray;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 p {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 a {
-  color: $blue;
+  color: $linkColor;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $linkActiveColor;
   }
 }
 
 ul, ol {
-  margin: 15px 0;
+  font-size: 14px;
+  margin: 12px 0;
   padding-left: 30px;
 }
 
@@ -124,7 +124,7 @@ img {
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
-  background: $lightGray;
+  background: $darkGray;
 }
 ::selection {
   color: $black;
@@ -193,7 +193,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $titleColor;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -226,9 +226,9 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $linkColor;
     text-align: right;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 1px;
 
     @include mobile {
@@ -288,7 +288,11 @@ nav {
   padding: 0;
   list-style-type: none;
   font-size: 1em;
-  color: $gray;
+  color: #6c71c4;
+}
+
+.tags a {
+  color: #859900;
 }
 
 .tags li {
@@ -301,7 +305,7 @@ nav {
 .tags li a {
   padding: 4px 6px;
   margin: 2px;
-  background-color: #e6e6e6;
+  background-color: $darkGray;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
