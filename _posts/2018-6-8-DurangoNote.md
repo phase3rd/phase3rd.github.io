@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Durango 표류일지
-published: true
+published: false
 date: 2018-6-8
 categories: [durango]
 tags: [durango,note,daily]
