@@ -8,3 +8,5 @@ tags: [language,python]
 ---
 
 ##### Python Tips
+
+그런거 없다. 테스트로 만들어봄
