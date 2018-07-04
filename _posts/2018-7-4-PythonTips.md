@@ -9,4 +9,4 @@ tags: [language,python]
 
 ##### Python Tips
 
-그런거 없다. 테스트로 만들어봄
+사실 잘 몰라요. Git flow 연습하느라고 만들어본 페이지 입니다.
